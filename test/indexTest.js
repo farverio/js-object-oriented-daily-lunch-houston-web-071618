@@ -27,7 +27,12 @@ describe('index.js', () => {
     let secondNeighborhood;
 
     beforeEach(() => {
-      store = { neighborhoods: [], meals: [], customers: [], deliveries: [] };
+      store = { neighborhoods: [], meals: [], customers: [], deliveries: [],   ids: {
+          neighborhood: 0, 
+          meal: 0, 
+          customer: 0,
+          delivery: 0
+        } };
       neighborhood = new Neighborhood('Dumbo');
       secondNeighborhood = new Neighborhood('Hamsterdam');
       meal = new Meal('5 lbs of Fruity Pebbles', 25);
